@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>page d' accueil</title>
+ <link rel="stylesheet" href="mini-projet.p2.css">
+</head>
+<body>
+   <div class="header">
+<nav> 
+    <ul class="menu">
+        <li><button onclick="gotoLink(this)" value="file:///C:/Users/Dell/Desktop/Nouveau%20dossier%20(6)/mini-projet.p2.html" class="button1" >home</button></li>
+        <li><button onclick="gotoLink(this)" value="file:///C:/Users/Dell/Desktop/Nouveau%20dossier%20(6)/mini-projet.page3.html" class="button2" >courses</button></li>
+        <li><a href="about"></a> About</li>
+
+    </ul>
+    <form >
+        <input type="search"  class="btn"  name="q" placeholder="recherche">
+    </form>
+</nav>
+</div>
+
+<div class="corsesList" id="section2" >
+  <div class="container text-center">
+    <div class="row">
+      <div class="d1">
+         <div class="cour1">
+          <img src="./images/javascriptDef.png" alt="" class="img">
+          
+            <main class="price">70</main>
+            
+         </div>
+      </div>
+      <div class="d2">
+        <div class="cour2">
+          <img src="./images/htmlBasics.PNG" alt="" class="img">
+          
+            <main class="price">99</main>
+            
+         </div>
+      </div>
+      <div class="d3">
+        <div class="cour3">
+          <img src="./images/htmlElements.png" alt="" class="img">
+          
+            <main class="price">100</main>
+            
+         </div>
+      </div>
+    </div>
+  </div>
+  <button onclick="gotoLink(this)" value="file:///C:/Users/Dell/Desktop/Nouveau%20dossier%20(6)/mini-projet.page3.html" class="button" >sign up</button> </div>
+<script>
+  var courses = [
+    {
+        image: 'images/javascriptDef.png',
+        title: 'what is javascript?',
+        category: 'JS',
+        price: 70,
+    },
+    {
+        image: 'images/htmlBasics.PNG',
+        title: 'basics of HTML',
+        category: 'HTML',
+        price: 99
+    },
+    {
+        image: 'images/htmlElements.png',
+        title: 'HTML elements and tags',
+        category: 'HTML',
+        price: 100
+    },
+    {
+        image: 'images/cssSelectors.jpg',
+        title: 'CSS selectors',
+        category: 'CSS',
+        price: 68
+    },
+    {
+        image: 'images/javascriptVariables.png',
+        title: 'variables and data type of javascript',
+        category: 'JS',
+        price: 50
+    },
+    {
+        image: 'images/javascriptOperators.png',
+        title: 'Javascript operators and conditions',
+        category: 'JS',
+        price: 28
+    },
+    {
+        image: 'images/htmlAttrVal.jpg',
+        title: 'HTML attributes and values',
+        category: 'HTML',
+        price: 19
+    },
+    {
+        image: 'images/cssProperties.png',
+        title: 'CSS properties',
+        category: 'CSS',
+        price: 29
+    },
+    {
+        image: 'images/javascriptObjects.png',
+        title: 'Javascript objects and arrays',
+        category: 'JS',
+        price: 29
+    },
+    {
+        image: 'images/cssMesures.png',
+        title: 'mesures and unites of CSS',
+        category: 'CSS',
+        price: 19
+    }
+    ,
+    {
+        image: 'images/phpBasics.png',
+        title: 'getting started with php',
+        category: 'PHP',
+        price: 15
+    },
+    {
+        image: 'images/phpDataBase.png',
+        title: 'connecting to database using PHP',
+        category: 'PHP',
+        price: 28
+    },
+];
+ 
+
+
+setTimeout(() => {
+    let c=Math.floor(Math.random() * 10);
+    let b=Math.floor(Math.random() * 10);
+    let d=Math.floor(Math.random() * 10);
+     document.getElementsByClassName("img")[0].setAttribute("src",courses[c].image);
+     document.getElementsByClassName("corses-name")[0].innerHTML=courses[c].title;
+     document.getElementsByClassName("price")[0].innerHTML=courses[c].price;
+    
+     document.getElementsByClassName("img")[1].setAttribute("src",courses[b].image);
+     document.getElementsByClassName("corses-name")[1].innerHTML=courses[b].title;
+     document.getElementsByClassName("price")[1].innerHTML=courses[b].price;
+     document.getElementsByClassName("img")[2].setAttribute("src",courses[d].image);
+     document.getElementsByClassName("corses-name")[2].innerHTML=courses[d].title;
+     document.getElementsByClassName("price")[2].innerHTML=courses[d].price;
+  }, 3000);
+ 
+  function gotoLink(link){
+    console.log(link.value);
+    window.open(link.value)
+   }
+</script>
+</body>
+</html>

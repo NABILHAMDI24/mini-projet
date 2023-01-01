@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>page Login</title>
+  <link rel="stylesheet" href="bootstrap-5.2.3-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="mini-projet.css">
+</head>
+<body>
+<div class="global">
+  <h1>Login</h1>
+  <form >
+    <div class="creation">
+      <div class="user"><label class="l-username" for="username"> username</label><br> 
+        <input type="text" class ="k-username " placeholder="choose a username" id="username" onkeyup="validateU()"><br>
+        <span id="error1" ></span><br>
+      </div>
+    </div>
+
+
+  <div class="creation">
+    <div class="eml">
+
+      <label class="l-email" for="email">Email </label>
+      <input type="email" placeholder="Enter your email" id="email" class="k-email" onkeyup="validateE()"/><br>
+      <span id="error2" ></span><br>
+    </div>
+  </div>
+
+
+  <div class="creation">
+    <div class="pass">
+    <label class="l-password" for="password">Password</label>
+    <input type="password" placeholder="Enter a strong password" id="password" class="k-password" onkeyup="validateP()" /><br>
+    <span id="error3" ></span><br>
+ 
+  </div>
+</div>
+
+
+<div class="creation">
+  <div class="conf-pass">
+  <label class="l-confirmpassword" for="confirmpassword">Confirm Password</label>
+  <input type="password" placeholder="Reenter your password" id="confirmpassword" class="k-confirmpassword" onkeyup="validateCP()"/><br>
+  <span id="error4" ></span><br>
+ </div>
+</div>
+ 
+
+
+  
+
+  
+<button onclick="gotoLink(this)" value="file:///C:/Users/Dell/Desktop/Nouveau%20dossier%20(6)/mini-projet.p2.html" class="button" >sign up</button>
+ </div>
+ </div>
+  </form>
+  <script>
+
+var username=document.getElementById("username");
+    var error1=document.getElementById("error1");
+    var emailF=document.getElementById("email");
+    var error2=document.getElementById("error2");
+    var password=document.getElementById("password"); 
+    var error3=document.getElementById("error3");
+    var confirmpassword=document.getElementById("confirmpassword"); 
+    var error4=document.getElementById("error4");
+   
+    function validateU(){
+    if(username.value==""){
+        error1.innerHTML="username cannot be blank"; 
+        username.style.borderColor="red";
+        return false;
+    }
+    if(!username.value.match(/^[A-Za-z]{3,25}$/)){
+        error1.innerHTML="username must be between 3 and 25 characters"; 
+        username.style.borderColor="red";
+        return false;
+    }
+    
+    error1.innerHTML="";
+    username.style.borderColor="green";
+    return true;
+   }  
+   function validateE(){
+    if(emailF.value==""){
+        error2.innerHTML="email cannot be blank"; 
+        emailF.style.borderColor="red";
+        return false;
+    }
+    if(!emailF.value.match(/^[A-Za-z\._\-0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)){
+        error2.innerHTML="email is not valid"; 
+        emailF.style.borderColor="red";
+        return false;
+    }
+     
+    error2.innerHTML="";
+    emailF.style.borderColor="green";
+    return true;
+   } 
+
+   function validateP(){
+    if(password.value==""){
+        error3.innerHTML="password can not be blank"; 
+        password.style.borderColor="red";
+        return false;
+    }
+    if(!password.value.match("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})")){
+        error3.innerHTML="Passwoed must has at least 8 characters that include at least 1 lowercase,\n 1 uppercase characters,1 number,and 1 special character in (!@#$%^&*)  "; 
+        password.style.borderColor="red";
+        return false;
+    }
+     
+    error3.innerHTML="";
+    password.style.borderColor="green";
+    return true;
+   }  
+     
+   function validateCP(){
+    if(confirmpassword.value==""){
+        error4.innerHTML="password can not be blank"; 
+        confirmpassword.style.borderColor="red";
+        return false;
+    }
+    if(confirmpassword.value !=password.value){
+        error4.innerHTML="The password does not match"; 
+        confirmpassword.style.borderColor="red";
+        return false;
+    }
+     
+    error4.innerHTML="";
+    confirmpassword.style.borderColor="green";
+    return true;
+   }  
+    function sub(){
+      if(validateU()==true&&validateE()==true&&validateP()==true&&validateCP()==true){
+        document.querySelector("form").setAttribute("action","home.html");
+  confirmpassword
+}
+      
+    }
+   function gotoLink(link){
+    console.log(link.value);
+    window.open(link.value)
+   }
+
+  </script>
+  
+  
+
+  
+</body>
+</html>

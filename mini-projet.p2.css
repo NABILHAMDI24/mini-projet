@@ -1,0 +1,140 @@
+body{
+    
+    background-image: url(images/wallpaperflare.com_wallpaper.jpg);
+}
+.header{
+    background-color: #287265;
+    height: 80px;
+    margin-top: 10px;  
+}
+.button1,.button2{
+    background-color:#287265 ;
+    border: none;
+    color: white;
+    font-size: 20px;
+    
+}.button1:hover{
+    color: cornflowerblue;
+    text-decoration: underline;
+    cursor: pointer;
+}
+nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px;
+}
+.button2:hover{
+    color: cornflowerblue;
+    text-decoration: underline;
+    cursor: pointer;
+}
+nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px;
+}
+ul li {
+    color: #fff;
+    letter-spacing: 0.2rem;
+    font-size: 20px;
+   
+}
+ul li:hover{
+    color: cornflowerblue;
+    text-decoration: underline;
+    cursor: pointer;
+    
+}
+.menu li{
+    float: left;
+    padding: 35px;
+}
+.menu li a{
+    text-decoration:none ;
+} 
+form{
+    padding: 35px;
+text-align: right;
+}
+.btn{
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+
+}
+.img{
+    
+    width: 1820px;
+    height: 900px;
+}
+.button{
+ 
+    width:100px;
+    height: 60px;
+    margin-top: 180px;
+   margin-left: 130px;
+   background-color: green;
+   border: none;
+   border-radius: 7px;
+   color: white;
+   cursor: pointer;
+}
+.corses{
+    text-align: center;
+  }
+
+  @media only screen and (max-width: 600px) {
+    #btn2{
+        position: absolute;
+        left: 35%;
+        bottom: 50%;
+        background-color: antiquewhite;
+        width: 150px;
+        height: 50px;
+        border-radius: 12px;
+        border: none;
+     }
+}
+span{
+    color: green;
+}
+.corsesList{
+    text-align: center;
+}
+
+.img{
+  width: 100%;
+  height: 80%;
+}
+.cour1,.cour2,.cour3{
+  width: 300px;
+  height: 220px;
+  border: 2px solid green;
+}
+
+
+
+#random1{
+  height: 50px;
+  background-color: green;
+  border-radius: 12px;
+  border: none;
+}
+
+
+
+@media only screen and (max-width: 900px) {
+  .cour1,.cour2,.cour3{
+    width: 300px;
+    height: 220px;
+    border: 2px solid green;
+    margin: 12px;
+    position: relative;
+    left: 80px ;
+  }
+  
+}
+
+.price{
+    font-size: 20px;
+}
